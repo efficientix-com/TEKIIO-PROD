@@ -513,9 +513,6 @@
                             <th align="center" colspan="2"
                                 style="font-size: 4pt; padding-left: 0px; padding-right: 0px;">Unidad
                             </th>
-                            <th align="center" colspan="5"
-                                style="font-size: 5pt; padding-left: 0px; padding-right: 0px;">UPC
-                            </th>
                             <th align="center" colspan="4"
                                 style="font-size: 5pt; padding-left: 0px; padding-right: 0px;">Cantidad
                             </th>
@@ -637,8 +634,6 @@
 
                             <td align="center" colspan="2"
                                 style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${Conceptos.atributos.ClaveUnidad}</td>
-                            <td align="center" colspan="5"
-                                style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${Conceptos.atributos.NoIdentificacion}</td>
                             <td align="center" colspan="4" line-height="150%"
                                 style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${Conceptos.atributos.Cantidad?number?string[",##0.00"]}</td>
                             <td align="center" colspan="4"
@@ -712,8 +707,6 @@
 
                         <th align="center" colspan="2" style="font-size: 4pt; padding-left: 0px; padding-right: 0px;">
                             Unidad
-                        </th>
-                        <th align="center" colspan="5" style="font-size: 5pt; padding-left: 0px; padding-right: 0px;">UPC
                         </th>
                         <th align="center" colspan="4" style="font-size: 5pt; padding-left: 0px; padding-right: 0px;">
                             Cantidad
@@ -836,8 +829,6 @@
 
                         <td align="center" colspan="2"
                             style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${dataXML.Conceptos.Concepto.atributos.ClaveUnidad}</td>
-                        <td align="center" colspan="5"
-                            style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${dataXML.Conceptos.Concepto.atributos.NoIdentificacion}</td>
                         <td align="center" colspan="4" line-height="150%"
                             style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${dataXML.Conceptos.Concepto.atributos.Cantidad?number?string[",##0.00"]}</td>
                         <td align="center" colspan="4"
@@ -915,8 +906,6 @@
 
                             <th align="center" colspan="2" style="font-size: 4pt; padding-left: 0px; padding-right: 0px;">
                                 Unidad
-                            </th>
-                            <th align="center" colspan="5" style="font-size: 5pt; padding-left: 0px; padding-right: 0px;">UPC
                             </th>
                             <th align="center" colspan="4" style="font-size: 5pt; padding-left: 0px; padding-right: 0px;">
                                 Cantidad
@@ -1026,8 +1015,6 @@
 
                                 <td align="center" colspan="2"
                                     style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${item.units}</td>
-                                <td align="center" colspan="5"
-                                    style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${item.custcol_efx_fe_upc_code}</td>
                                 <td align="center" colspan="4" line-height="150%"
                                     style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${item.quantity}</td>
                                 <td align="center" colspan="4"
