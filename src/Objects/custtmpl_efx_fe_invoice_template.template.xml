@@ -530,6 +530,15 @@
                             </th>
                         </tr>
                     </thead>
+                    <#assign "description_items" = []>
+                    <#list record.item as item>
+                        <#assign "tipo_articulo" = item.itemtype>
+                        <#if tipo_articulo != "Descuento">
+                            <#assign "description_items" = description_items + [item.description]>
+                        </#if>
+                    </#list>
+
+                    <#assign description_position = 0>
                     <#list dataXML.Conceptos.Concepto as Conceptos>
                         <tr>
                             <td align="center" colspan="2" line-height="150%"
@@ -541,11 +550,11 @@
                             <td colspan="18" style="margin: 0; padding: 0;">
                                 <table style="width: 100%">
                                     <tr>
-                                    <#list record.item as item>
-                                        <td colspan="18" style="border-left: 1px; border-color: #e3e3e3; font-size: 6pt; padding-right: 1px; padding-left: 1px; padding-top: 1px; padding-bottom: 0px; word-break: ">
-                                            ${item.description}
-                                        </td>
-                                    </#list>
+                                        <#if description_position lt description_items?size>
+                                            <td colspan="18" style="border-left: 1px; border-color: #e3e3e3; font-size: 6pt; padding-right: 1px; padding-left: 1px; padding-top: 1px; padding-bottom: 0px; word-break: ">
+                                                ${description_items[description_position]}
+                                            </td>
+                                        </#if>
                                     </tr>
 
                                     <tr>
@@ -665,6 +674,7 @@
                                 style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding-top: 1px; padding-left: 0px; padding-right: 0px;">${Conceptos.atributos.Importe?number?string[",##0.00"]}</td>
                         </tr>
 
+                        <#assign description_position = description_position + 1>
                     </#list>
                 <#else>
                     <thead>
@@ -733,14 +743,19 @@
                         <td align="center" colspan="5" line-height="150%"
                             style="border-left: 1px; border-color: #e3e3e3;font-size: 5pt; padding:0;">${dataXML.Conceptos.Concepto.atributos.ClaveProdServ}</td>
 
+                        <#assign "description_items" = []>
+                        <#list record.item as item>
+                            <#assign "tipo_articulo" = item.itemtype>
+                            <#if tipo_articulo != "Descuento">
+                                <#assign "description_items" = description_items + [item.description]>
+                            </#if>
+                        </#list>
                         <td colspan="18" style="margin: 0; padding: 0;">
                             <table style="width: 100%">
                                 <tr>
-                                    <#list record.item as item>
-                                        <td colspan="18" style="border-left: 1px; border-color: #e3e3e3; font-size: 6pt; padding-right: 1px; padding-left: 1px; padding-top: 1px; padding-bottom: 0px; word-break: ">
-                                            ${item.description}
-                                        </td>
-                                    </#list>
+                                    <td colspan="18" style="border-left: 1px; border-color: #e3e3e3; font-size: 6pt; padding-right: 1px; padding-left: 1px; padding-top: 1px; padding-bottom: 0px; word-break: ">
+                                        ${description_items[0]}
+                                    </td>
                                 </tr>
 
                                 <tr>
